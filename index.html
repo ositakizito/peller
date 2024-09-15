@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title Tag -->
+    <title>Peller Giveaway - Win Free 50GB of Data</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Enter the Peller giveaway for a chance to win 50GB of free data. Check your eligibility, submit your phone number, and share to unlock your prize.">
+
+    <!-- Meta Keywords (Optional) -->
+    <meta name="keywords" content="Peller giveaway, win free data, 50GB giveaway, check eligibility, free 50GB">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.example.com/peller-giveaway">
+
+    <!-- Open Graph Tags (for Social Media Sharing) -->
+    <meta property="og:title" content="Peller Giveaway - Win Free 50GB of Data">
+    <meta property="og:description" content="Enter the Peller giveaway for a chance to win 50GB of free data. Check your eligibility, submit your phone number, and share to unlock your prize.">
+    <meta property="og:image" content="https://www.example.com/peller.jpg">
+    <meta property="og:url" content="https://www.example.com/peller-giveaway">
+
+    <!-- Twitter Card Tags (Optional) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Peller Giveaway - Win Free 50GB of Data">
+    <meta name="twitter:description" content="Enter the Peller giveaway for a chance to win 50GB of free data. Check your eligibility, submit your phone number, and share to unlock your prize.">
+    <meta name="twitter:image" content="https://www.example.com/peller.jpg">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+        <!-- Existing meta and link tags -->
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+    
+            gtag('config', 'YOUR_TRACKING_ID');
+        </script>
+    
+    
+</head>
+<body>
+    <header><h2>Peller Giveaway</h2></header>
+    <div class="tabbar" style="margin: 10px 0px;">
+        <!-- Replace href with your actual TikTok and Facebook profile URLs -->
+        <a href="https://www.tiktok.com/@siitecch" target="_blank" class="tabbar-btn">Follow on TikTok</a>
+        <a href="https://www.facebook.com/profile.php?id=100076062997043" target="_blank" class="tabbar-btn">Follow on Facebook</a>
+    </div>
+    <div class="container">
+        <h1 id="">Win Free 50GB with Peller's Giveaway</h1>
+        <p>Participate in our giveaway to get a chance to win 50GB of free data! Click the button below to check if you're eligible.</p>
+        <button id="checkEligibilityButton" class="glow-btn shake-button">Check Eligibility</button>
+
+        <div class="loading-container" id="loadingContainer" style="display: none;">
+            <div class="loading-bar">
+                <div id="loadingProgress" class="progress"></div>
+            </div>
+            <p id="loadingText">0%</p>
+        </div>
+
+        <div id="phoneInputContainer" style="display: none;">
+            <input type="text" id="phoneNumber" placeholder="Enter your phone number" />
+            <button id="submitPhoneButton">Submit</button>
+            <p id="message" class="message"></p>
+        </div>
+        <br>
+        <br>
+        <div class="profile-picture">
+            <!-- Space for your picture -->
+            <a href="https://www.tiktok.com/@siitecch" target="_blank">
+                <img src="peller.jpg" alt="Peller giveaway image" width="100%" class="zoom-image" />
+            </a>
+        </div>
+
+      
+    </div>
+
+  
+    <div class="popup" id="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Congratulations!</h2>
+            <p>You have won 50GB of free data! Share to unlock your prize.</p>
+            <div class="loading-spinner" id="loadingSpinner"></div>
+            <button id="whatsappShareButton">Share on WhatsApp</button>
+            <button id="facebookShareButton" style="display: none;">Share on Facebook</button>
+            <button id="tiktokShareButton" style="display: none;">Share on TikTok</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('whatsappShareButton').addEventListener('click', function () {
+            let shareUrl = encodeURIComponent(window.location.href);
+            let whatsappUrl = `https://api.whatsapp.com/send?text=Check out this amazing offer: ${shareUrl}`;
+            
+            // Open WhatsApp share dialog
+            window.open(whatsappUrl, '_blank');
+
+            // Delay to ensure the user has time to interact with the WhatsApp dialog
+            setTimeout(() => {
+                document.getElementById('facebookShareButton').click();
+            }, 20000); // Adjust delay as needed (5000 ms = 5 seconds)
+        });
+
+        document.getElementById('facebookShareButton').addEventListener('click', function () {
+            let shareUrl = encodeURIComponent(window.location.href);
+            let facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+            
+            // Open Facebook share dialog
+            window.open(facebookUrl, '_blank');
+
+            // Delay to ensure the user has time to interact with the Facebook dialog
+            setTimeout(() => {
+                document.getElementById('tiktokShareButton').click();
+            }, 20000); // Adjust delay as needed (5000 ms = 5 seconds)
+        });
+
+        document.getElementById('tiktokShareButton').addEventListener('click', function () {
+            let tiktokUrl = `https://www.tiktok.com/`; // General link to TikTok
+            
+            // Open TikTok page
+            window.open(tiktokUrl, '_blank');
+        });
+    </script>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: milkywhite;
+    color: lightgreen;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+.container h1 {
+    text-align: center;
+}
+.container p {
+    text-align: center;
+    padding: 5px 0px;
+    margin: 10px;
+}
+
+header{
+   background-color: lightgreen;
+   width: 100%;
+   height: 70px;
+   color: #fff;
+   padding-left: 10px;
+   font-size: 20px;
+   line-height: 70px;
+}
+
+.glow-btn {
+    background-color: lightgreen;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px lightgreen;
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 20px lightgreen; }
+    50% { box-shadow: 0 0 30px lightgreen; }
+    100% { box-shadow: 0 0 20px lightgreen; }
+}
+
+/* Cursor style for typing effect */
+.typing-cursor {
+    border-right: 2px solid black;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: black; }
+    100% { border-color: transparent; }
+}
+
+
+.loading-container {
+    margin-top: 20px;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: lightgreen;
+}
+
+#phoneInputContainer #phoneNumber{
+   padding: 10px 5px;
+   outline: none;
+   border: 1px solid lightgreen;
+}
+#phoneInputContainer button{
+   padding: 10px;
+   background-color: lightgreen;
+   border: none;
+   color: white;
+}
+#phoneInputContainer #message{
+   margin: 0px;
+   font-size: 15px;
+   margin-right: 65px;
+}
+#whatsappShareButton{
+    padding: 8px;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: lightgreen;
+    color: #fff;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 10px;
+}
+
+.tabbar{
+    display: flex;
+    justify-content: space-between;
+}
+.reply-btn, .tabbar-btn {
+    background-color: lightgreen;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-section input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.input-icons i {
+    font-size: 24px;
+    cursor: pointer;
+}
+.loading-spinner {
+    border: 4px solid lightgray;
+    border-top: 4px solid lightgreen;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Keyframes for shaking effect */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Apply animation to the button */
+.shake-button {
+    animation: shake 0.5s infinite; /* 0.5s duration, infinite loop */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+/* Keyframes for zoom in and out effect */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Zoom in by 20% */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}
+
+/* Apply animation to the image */
+.zoom-image {
+    animation: zoomInOut 5s infinite; /* 5s duration, infinite loop */
+    transition: transform 0.5s; /* Smooth transition */
+}
+
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, lightgreen 0%, transparent 100%);
+    background-size: 200% 100%;
+    border-radius: 10px;
+    animation: moveProgress 1.5s linear infinite; /* Smooth animation */
+}
+
+@keyframes moveProgress {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
